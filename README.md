@@ -1,9 +1,9 @@
-`# MongoDB tutorials
+# MongoDB tutorials
 
 ## NoSQL 
-`* NoSQL är "non relational"
+* NoSQL är "non relational"
 * Principen är Key-Value-Modell
-`* Collection motsvaras av Tabell 
+* Collection motsvaras av Tabell 
 * Document motsvaras av Post (record)
 * Document är ett JSON objekt
 * Kräver ingen uppsättning med type och relationer
@@ -13,7 +13,7 @@
 ## MongoDB
 * MongoDB är gratis
 * MongoDB köras på Mac, Win, Linux
-``  
+
 ## Start Mongo with path to data
 `Mongodb --dbpath "\program files\mongodb\data\db"` 
 
@@ -23,7 +23,7 @@
 ## Välj databas
 `use <db>` //skapar ny db eller switchar till befintlig
 
-``## Connection string
+## Connection string
 `mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]`
 
 ## Create Collection
