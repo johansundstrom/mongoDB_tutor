@@ -1,21 +1,18 @@
-````# mongoDB_tutor
-MongoDB tutorials
+# MongoDB tutorials
 
-##NoSQL 
+## NoSQL 
 * NoSQL är "non relational"
 * Principen är Key-Value-Modell
-* Document motsvaras av Post (record)
 * Collection motsvaras av Tabell 
-* 
-* Documents are similar to JSON objects
+* Document motsvaras av Post (record)
+* Document är ett JSON objekt
 * Kräver ingen uppsättning med type och relationer
-* The _id Field acts as a primary key and is automatically generated
+* Fältet _id är primär nyckel och genereras automatiskt
 * MongoDB är NoSQL
 
 ##MongoDB
 * MongoDB är gratis
 * MongoDB köras på Mac, Win, Linux
-* 
   
 ##Start Mongo with path to data
 `Mongodb --dbpath "\program files\mongodb\data\db"` 
@@ -46,8 +43,7 @@ db.users.find(              //collection
 
 ##Update Collection
 db.users.update(              //collection
-  { age: { $gt: 18 }},        //update criteria
-  { $set: { status: "A" }},   //update actio
+  { age: { $gt: 18 }},        //update criteria  { $set: { status: "A" }},   //update actio
   { multi: true }             //update option
 )
 
