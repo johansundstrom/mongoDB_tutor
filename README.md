@@ -12,12 +12,12 @@
 
 ## MongoDB
 * MongoDB är gratis
-* MongoDB köras på Mac, Win, Linux
+* MongoDB körs på Mac, Win eller Linux
 
-## Start Mongo with path to data
+## Start MongoDB med sökväg till data
 `Mongodb --dbpath "\program files\mongodb\data\db"` 
 
-## Connect to remote MongoDB
+## Anslut till fjärr MongoDB
 `mongo mongodb://be9.asuscomm.com:27017/temp`
 
 ## Välj databas
@@ -68,7 +68,7 @@ db.createUser(
      user: "user",
      pwd: "password",
      roles: [
-	     { role: "readWrite", db: "<db>" }
+       { role: "readWrite", db: "<db>" }
     ]
   }
 )`
