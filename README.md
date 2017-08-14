@@ -1,9 +1,9 @@
-   # MongoDB tutorials
+`# MongoDB tutorials
 
 ## NoSQL 
-* NoSQL är "non relational"
+`* NoSQL är "non relational"
 * Principen är Key-Value-Modell
-* Collection motsvaras av Tabell 
+`* Collection motsvaras av Tabell 
 * Document motsvaras av Post (record)
 * Document är ett JSON objekt
 * Kräver ingen uppsättning med type och relationer
@@ -13,7 +13,7 @@
 ## MongoDB
 * MongoDB är gratis
 * MongoDB köras på Mac, Win, Linux
-  
+``  
 ## Start Mongo with path to data
 `Mongodb --dbpath "\program files\mongodb\data\db"` 
 
@@ -21,48 +21,48 @@
 `mongo mongodb://be9.asuscomm.com:27017/temp`
 
 ## Välj databas
-use <db> //skapar ny db eller switchar till befintlig
+`use <db>` //skapar ny db eller switchar till befintlig
 
-## Connection string
-mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+``## Connection string
+`mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]`
 
 ## Create Collection
-db.users.insert(
+`db.users.insert(
   {
     name: "Sue",
     age: 26,
     status: "A"
   }
-)
+)`
 
 ## Read Collection
-db.users.find(              //collection
+`db.users.find(              //collection
   { age: { $gt: 18 }},      //search criteria
   { name: 1, address: 1 }}  //projection
-).limit(5) 
+).limit(5)` 
 
 ## Update Collection
-db.users.update(              //collection
+`db.users.update(              //collection
   { age: { $gt: 18 }},        //update criteria  { $set: { status: "A" }},   //update actio
   { multi: true }             //update option
-)
+)`
 
 ## Remove Collection with Criteria
-db.users.remove(
+`db.users.remove(
   { status: "D"}  //Remove criteria
-)
+)`
 
 ## Drop DB
-db.users.drop()
+`db.users.drop()`
 
 ## Insert date
-Date('Dec 12, 2014 14:12:00')
+`Date('Dec 12, 2014 14:12:00')`
 
 ## Get Last record
-db.users.find().skip(db.users.count()-1).forEach(printjson)
+`db.users.find().skip(db.users.count()-1).forEach(printjson)`
 
 ## Skapa användarkonto på Mongo
-use admin
+`use admin
 db.createUser(
    {
      user: "user",
@@ -71,4 +71,4 @@ db.createUser(
 	     { role: "readWrite", db: "<db>" }
     ]
   }
-)
+)`
