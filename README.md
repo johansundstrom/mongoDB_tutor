@@ -27,19 +27,13 @@
 ```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
 
 ## Create Collection
-```db.users.insert(```
-```{```
-```   name: "Sue",```
-```   age: 26,```
-```   status: "A"```
-```}```
-)```
+```db.users.insert({ name: "Sue", age: 26, status: "A" })```
 
 ## Read Collection
-```db.users.find(           //collection
-  { age: { $gt: 18 }},      //search criteria
-  { name: 1, address: 1 }}  //projection
-).limit(5)``` 
+```db.users.find(           //collection```
+  { age: { $gt: 18 }},      //search criteria```
+```  { name: 1, address: 1 }}  //projection```
+```).limit(5)``` 
 
 ## Update Collection
 ```db.users.update(         //collection
