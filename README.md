@@ -27,12 +27,12 @@
 ```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
 
 ## Create Collection
-```db.users.insert(
-  {
-    name: "Sue",
-    age: 26,
-    status: "A"
-  }
+```db.users.insert(```
+```{```
+```   name: "Sue",```
+```   age: 26,```
+```   status: "A"```
+```}```
 )```
 
 ## Read Collection
