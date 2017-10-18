@@ -18,7 +18,7 @@
 ## Installera MongoDB
 * Följ anvisningarna på https://www.mongodb.com/download
 
-# Starta MongoDB med sökväg till data
+### Starta MongoDB med sökväg till data
 * Skapa mapp för data på ```data/db```
 * Se till att denna har skriv/läsrättigheter
 * ```Mongodb --dbpath "\program files\mongodb\data\db"``` (Windows)
@@ -28,20 +28,17 @@
 ```show dbs``` - Visar befintliga databaser
 
 ## Välj databas
-```use <db>``` - skapar ny db och/eller switchar till befintlig
+```use {db}``` - skapar ny db och/eller switchar till befintlig
 
 ## Visa Collections
 ```show collections```
 
-## Connection string
-```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
-
 ## Create Collection
-```db.users.insert({ name: "Sue", age: 26, status: "A" })```
+```db.kunder.insert({ name: "Anders", alder: 40, status: "A" })```
 
 ## Read Collection
 ```db.users.find(           //collection```
-  { age: { $gt: 18 }},      //search criteria```
+```  { age: { $gt: 18 }},      //search criteria```
 ```  { name: 1, address: 1 }}  //projection```
 ```).limit(5)``` 
 
@@ -76,6 +73,9 @@ db.createUser(
     ]
   }
 )```
+
+## Connection string
+```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
 
 # Anslut till fjärr MongoDB
 ```mongo mongodb://be9.asuscomm.com:27017/temp```
