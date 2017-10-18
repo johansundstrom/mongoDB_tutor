@@ -37,10 +37,12 @@
 ```db.kunder.insert({ name: "Anders", alder: 40, status: "A" })```
 
 ## Read Collection
-```db.users.find(           //collection```
-```  { age: { $gt: 18 }},      //search criteria```
-```  { name: 1, address: 1 }}  //projection```
-```).limit(5)``` 
+```javascript
+db.users.find(           //collection
+  { age: { $gt: 18 }},      //search criteria
+  { name: 1, address: 1 }}  //projection
+).limit(5)
+```
 
 ## Update Collection
 ```db.users.update(         //collection
