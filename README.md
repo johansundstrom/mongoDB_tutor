@@ -82,7 +82,7 @@ db.kunder.find(                //sök i Collection
 
 ### Visa Collection med sökkriterie och returerade fält
 ```javascript
-db.users.find(                //sök i Collection
+db.kunder.find(                //sök i Collection
   { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
   { _id: 0, rabattKod: 0 }}  //projection (returnerade fält)
 )
@@ -90,7 +90,7 @@ db.users.find(                //sök i Collection
 
 ### Visa Collection med sökkriterie och returerade fält och begränsat sökresultat
 ```javascript
-db.users.find(                //sök i Collection
+db.kunder.find(                //sök i Collection
   { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
   { _id: 0, status: 0 }}      //projection (returnerade fält)
 ).limit(5)
@@ -98,14 +98,14 @@ db.users.find(                //sök i Collection
 
 ## Uppdatera Collection
 ```javascript
-db.users.update(              //collection
+db.kunder.update(              //collection
   { rabattKod: { $gt: 1 }},   //update criteria  { $set: { status: "A" }},   //update actio
   { multi: true }           //update option
 )
 ```
 
 ## Remove Collection with Criteria
-```db.users.remove(
+```db.kunder.remove(
   { status: "D"}            //Remove criteria
 )```
 
