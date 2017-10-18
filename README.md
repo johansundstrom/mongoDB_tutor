@@ -40,7 +40,9 @@ show collections          //visar alla Collections
 ```
 
 ### Skapa Collection
-```db.kunder.insert({ name: "Anders", alder: 40, status: "A" })```
+```javascript
+db.kunder.insert({ name: "Anders", age: 40, status: "A" })
+```
 
 ### Definition
 * ```db.collection.find(query, projection)```
@@ -52,15 +54,24 @@ db.kunder.find()           //Visar alla Documents i Collection
 
 ### Visa Collection med sökkriterie
 ```javascript
-db.users.find(              //sök i Collection
+db.users.find(             //sök i Collection
   { age: { $gt: 18 }}      //Sökkriteria "greater than"
 )
+```
 
-### Visa Collection med sökkriterie
+### Visa Collection med sökkriterie och returerade fält
 ```javascript
 db.users.find(              //sök i Collection
   { age: { $gt: 18 }},      //Sökkriteria "greater than"
-  { name: 1, address: 1 }}  //projection (returnerade fält)
+  { _id: 0, name: 1, status: 0 }}  //projection (returnerade fält)
+)
+```
+
+### Visa Collection med sökkriterie och returerade fält och begränsat sökresultat
+```javascript
+db.users.find(              //sök i Collection
+  { age: { $gt: 18 }},      //Sökkriteria "greater than"
+  { _id: 0, name: 1, status: 0 }}  //projection (returnerade fält)
 ).limit(5)
 ```
 
