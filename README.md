@@ -2,25 +2,25 @@
 
 ## NoSQL 
 * NoSQL är "non relational"
-* Principen är Key-Value-Modell
+* Principen är Key-Value-Modell liknande JSON-modellen
 * _Collection_ motsvaras av Tabell
 * _Document_ motsvaras av Post (record)
 * _Document_ är ett JSON objekt
-* Kräver ingen uppsättning med type och relationer
-* Fältet ```_id``` är primär nyckel och genereras automatiskt
+* Kräver ingen uppsättning med typdefinitioner eller relationer
 * MongoDB är NoSQL
 
 ## MongoDB
 * MongoDB är gratis
 * MongoDB körs på Mac, Win eller Linux
+* Fältet ```_id``` är primär nyckel och genereras automatiskt
 
 ## Installera MongoDB
 * Följ anvisningarna på https://www.mongodb.com/download
 
-## Starta MongoDB med sökväg till data
+# Starta MongoDB med sökväg till data
 ```Mongodb --dbpath "\program files\mongodb\data\db"``` (Windows)
 
-## Anslut till fjärr MongoDB
+
 ```mongo mongodb://be9.asuscomm.com:27017/temp```
 
 ## Visa databaser
@@ -75,3 +75,5 @@ db.createUser(
     ]
   }
 )```
+
+# Anslut till fjärr MongoDB
