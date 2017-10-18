@@ -24,10 +24,12 @@
 * ```Mongodb --dbpath "\program files\mongodb\data\db"``` (Windows)
 * Mongodb lyssnar på TCP-port 27017
 
-## Visa databaser
+## Databaser i Mongo
+
+### Visa databaser
 ```show dbs``` - Visar befintliga databaser
 
-## Välj databas
+### Välj databas
 ```use {db}``` - skapar ny db och/eller switchar till befintlig
 
 ## Collections
