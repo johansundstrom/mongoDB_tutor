@@ -22,6 +22,7 @@
 * Skapa mapp för data på ```data/db```
 * Se till att denna har skriv/läsrättigheter
 * ```Mongodb --dbpath "\program files\mongodb\data\db"``` (Windows)
+* ```mongod --dbpath <path to data directory>```(Mac)
 * Mongodb lyssnar på TCP-port 27017
 
 ## Databaser i Mongo
