@@ -25,6 +25,20 @@
 * ```mongod --dbpath <path to data directory>```(Mac)
 * Mongodb lyssnar på TCP-port 27017
 
+## Skapa användarkonto på Mongo
+```javascript
+use admin
+db.createUser(
+   {
+     user: "user",
+     pwd: "password",
+     roles: [
+       { role: "readWrite", db: "<db>" }
+    ]
+  }
+)
+```
+
 ## Databaser i Mongo
 
 ### Visa databaser
@@ -39,27 +53,36 @@
 
 ## Collections
 
+### Skapa databasen OLF
+```use OLF```
+
 ### Visa Collections
 ```javascript
 show collections          //visar alla Collections
 ```
-### Skapa databasen OLF
-```use OLF```
 
 ### Skapa Collection
 ```javascript
 db.kunder.insert({ company: "Anders", adress: "Storgatan", rabattKod: 2 })
 ```
 
+### Visa Collections
+```javascript
+show collections          //visar alla Collections
+```
+
 ### Sökdefinition
-* Det går att söka definitioner enligt...
-```db.collection.find(query, projection)```
+* Det går att söka definitioner enligt - db.collection.find(query, projection)
 
 ### Visa Collection
 ```javascript
-db.kunder.find()              //Visar alla Documents i Collection
+db.kunder.find()          //Visar alla Documents i Collection
 ```
 
+### Visa Collection
+```javascript
+db.kunder.find().pretty()  //Visar alla Documents i Collection
+```
 
 | Name	| Description                                  |
 |-------|----------------------------------------------|
@@ -75,7 +98,7 @@ db.kunder.find()              //Visar alla Documents i Collection
 
 ### Visa Collection med sökkriterie
 ```javascript
-db.kunder.find(                //sök i Collection
+db.kunder.find(               //sök i Collection
   { rabattKod: { $gt: 1 }}    //Sökkriteria "greater than"
 )
 ```
@@ -83,14 +106,14 @@ db.kunder.find(                //sök i Collection
 ### Visa Collection med sökkriterie och returerade fält
 ```javascript
 db.kunder.find(                //sök i Collection
-  { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
-  { _id: 0, rabattKod: 0 }}  //projection (returnerade fält)
+  { rabattKod: { $gt: 1 }},    //Sökkriteria "greater than"
+  { _id: 0, rabattKod: 0 }}    //projection (returnerade fält)
 )
 ```
 
 ### Visa Collection med sökkriterie och returerade fält och begränsat sökresultat
 ```javascript
-db.kunder.find(                //sök i Collection
+db.kunder.find(               //sök i Collection
   { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
   { _id: 0, status: 0 }}      //projection (returnerade fält)
 ).limit(5)
@@ -104,33 +127,32 @@ db.kunder.update(              //collection
 )
 ```
 
-## Remove Collection with Criteria
-```db.kunder.remove(
-  { status: "D"}            //Remove criteria
-)```
-
+## Radera Collection med kriteria
+```javascript
+db.kunder.remove(
+  { rabattKod: 2}            //Remove criteria
+)
+```
 
 
 ## Insert date
-```Date('Dec 12, 2014 14:12:00')```
+```javascript
+Date('Dec 12, 2014 14:12:00')
+```
 
 ## Get Last record
-```db.users.find().skip(db.users.count()-1).forEach(printjson)```
+```javascript
+db.kunder.find().skip(db.kunder.count()-1).forEach(printjson)
+```
 
-## Skapa användarkonto på Mongo
-```use admin
-db.createUser(
-   {
-     user: "user",
-     pwd: "password",
-     roles: [
-       { role: "readWrite", db: "<db>" }
-    ]
-  }
-)```
+
 
 ## Connection string
-```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
+```javascript
+mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+```
 
 # Anslut till fjärr MongoDB
-```mongo mongodb://be9.asuscomm.com:27017/temp```
+```javascript
+mongo mongodb://be9.asuscomm.com:27017/temp
+```
