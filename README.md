@@ -29,8 +29,12 @@
 ### Visa databaser
 ```show dbs``` - Visar befintliga databaser
 
-### Välj databas
-```use {db}``` - skapar ny db och/eller switchar till befintlig
+### Välj välj/skapa databas
+```use example_db``` - skapar ny db och/eller switchar till befintlig
+
+### Radera databas
+```db.example_db.drop()```
+
 
 ## Collections
 
@@ -38,47 +42,50 @@
 ```javascript
 show collections          //visar alla Collections
 ```
+### Skapa databasen OLF
+```use OLF```
 
 ### Skapa Collection
 ```javascript
-db.kunder.insert({ name: "Anders", age: 40, status: "A" })
+db.kunder.insert({ company: "Anders", adress: "Storgatan", rabattKod: 2 })
 ```
 
-### Definition
-* ```db.collection.find(query, projection)```
+### Sökdefinition
+* Det går att söka definitioner enligt...
+```db.collection.find(query, projection)```
 
 ### Visa Collection
 ```javascript
-db.kunder.find()           //Visar alla Documents i Collection
+db.kunder.find()              //Visar alla Documents i Collection
 ```
 
 ### Visa Collection med sökkriterie
 ```javascript
-db.users.find(             //sök i Collection
-  { age: { $gt: 18 }}      //Sökkriteria "greater than"
+db.kunder.find(                //sök i Collection
+  { rabattKod: { $gt: 1 }}    //Sökkriteria "greater than"
 )
 ```
 
 ### Visa Collection med sökkriterie och returerade fält
 ```javascript
-db.users.find(              //sök i Collection
-  { age: { $gt: 18 }},      //Sökkriteria "greater than"
-  { _id: 0, name: 1, status: 0 }}  //projection (returnerade fält)
+db.users.find(                //sök i Collection
+  { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
+  { _id: 0, rabattKod: 0 }}  //projection (returnerade fält)
 )
 ```
 
 ### Visa Collection med sökkriterie och returerade fält och begränsat sökresultat
 ```javascript
-db.users.find(              //sök i Collection
-  { age: { $gt: 18 }},      //Sökkriteria "greater than"
-  { _id: 0, name: 1, status: 0 }}  //projection (returnerade fält)
+db.users.find(                //sök i Collection
+  { rabattKod: { $gt: 1 }},   //Sökkriteria "greater than"
+  { _id: 0, status: 0 }}      //projection (returnerade fält)
 ).limit(5)
 ```
 
-## Update Collection
+## Uppdatera Collection
 ```javascript
-db.users.update(            //collection
-  { age: { $gt: 18 }},      //update criteria  { $set: { status: "A" }},   //update actio
+db.users.update(              //collection
+  { rabattKod: { $gt: 1 }},   //update criteria  { $set: { status: "A" }},   //update actio
   { multi: true }           //update option
 )
 ```
@@ -88,8 +95,7 @@ db.users.update(            //collection
   { status: "D"}            //Remove criteria
 )```
 
-## Drop DB
-```db.users.drop()```
+
 
 ## Insert date
 ```Date('Dec 12, 2014 14:12:00')```
