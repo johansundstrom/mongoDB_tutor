@@ -30,19 +30,35 @@
 ## Välj databas
 ```use {db}``` - skapar ny db och/eller switchar till befintlig
 
-## Visa Collections
-```show collections```
+## Collections
 
-## Create Collection
+### Visa Collections
+```javascript
+show collections          //visar alla Collections
+```
+
+### Skapa Collection
 ```db.kunder.insert({ name: "Anders", alder: 40, status: "A" })```
 
-## Read Collection
-```db.kunder.find()         //Visar alla Documents```
+### Definition
+* ```db.collection.find(query, projection)```
 
+### Visa Collection
 ```javascript
-db.users.find(              //collection
-  { age: { $gt: 18 }},      //search criteria
-  { name: 1, address: 1 }}  //projection
+db.kunder.find()           //Visar alla Documents i Collection
+```
+
+### Visa Collection med sökkriterie
+```javascript
+db.users.find(              //sök i Collection
+  { age: { $gt: 18 }}      //Sökkriteria "greater than"
+)
+
+### Visa Collection med sökkriterie
+```javascript
+db.users.find(              //sök i Collection
+  { age: { $gt: 18 }},      //Sökkriteria "greater than"
+  { name: 1, address: 1 }}  //projection (returnerade fält)
 ).limit(5)
 ```
 
