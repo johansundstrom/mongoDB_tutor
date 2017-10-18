@@ -23,8 +23,14 @@
 ## Anslut till fjärr MongoDB
 ```mongo mongodb://be9.asuscomm.com:27017/temp```
 
+## Visa databaser
+```show dbs``` - Visar befintliga databaser
+
 ## Välj databas
-```use <db>``` //skapar ny db eller switchar till befintlig
+```use <db>``` - skapar ny db och/eller switchar till befintlig
+
+## Visa Collections
+```show collections```
 
 ## Connection string
 ```mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]```
