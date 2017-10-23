@@ -119,7 +119,7 @@ db.kunder.find(               //sök i Collection
 ).limit(5)
 ```
 
-## Uppdatera Collection
+### Uppdatera Collection
 ```javascript
 db.kunder.update(              //collection
   { rabattKod: { $gt: 1 }},   //update criteria  { $set: { status: "A" }},   //update actio
@@ -127,7 +127,7 @@ db.kunder.update(              //collection
 )
 ```
 
-## Radera Collection med kriteria
+### Radera Collection med kriteria
 ```javascript
 db.kunder.remove(
   { rabattKod: 2}            //Remove criteria
@@ -135,24 +135,24 @@ db.kunder.remove(
 ```
 
 
-## Insert date
+### Insert date
 ```javascript
 Date('Dec 12, 2014 14:12:00')
 ```
 
-## Get Last record
+### Get Last record
 ```javascript
 db.kunder.find().skip(db.kunder.count()-1).forEach(printjson)
 ```
 
-
+## Anslutningar
 
 ## Connection string
 ```javascript
 mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 ```
 
-# Anslut till fjärr MongoDB
+### Anslut till fjärr MongoDB
 ```javascript
 mongo mongodb://be9.asuscomm.com:27017/temp
 ```
