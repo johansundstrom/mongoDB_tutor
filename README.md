@@ -13,7 +13,7 @@
 ## MongoDB
 * MongoDB är gratis
 * MongoDB körs på Mac/Win/Linux
-* Fältet ```_id``` är primär nyckel och genereras automatiskt varje _collection_
+* Fältet ```_id``` är primär nyckel och genereras automatiskt i varje _collection_
 
 ## Installera MongoDB
 * Följ anvisningarna på https://www.mongodb.com/download
@@ -91,16 +91,16 @@ db.kunder.find(
 db.kunder.find().pretty()  //Visar alla Documents i Collection
 ```
 
-| Name	| Description                                  |
+| Name  | Description                                  |
 |-------|----------------------------------------------|
 | $eq	  | lika med ett specifikt värde                 |
 | $gt	  | större än ett specifikt värde                |
-| $gte	| större än eller lika med ett specifikt värde |
+| $gte  | större än eller lika med ett specifikt värde |
 | $lt	  | mindre än ett specifikt värde                |
-| $lte	| mindre än eller lika med ett specifikt värde |
+| $lte  | mindre än eller lika med ett specifikt värde |
 | $ne	  | inte lika med ett specifikt värde            |
 | $in	  | värdet finns i en array                      |
-| $nin	| värdet finns inte i en array                 |
+| $nin  | värdet finns inte i en array                 |
 
 
 ### Visa Collection med sökkriterie
