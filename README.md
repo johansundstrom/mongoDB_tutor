@@ -135,9 +135,18 @@ db.kunder.find(               //sök i Collection
 
 ### Uppdatera Collection
 ```javascript
-db.kunder.update(              //collection
-  { rabattKod: { $gt: 1 }},   //update criteria  { $set: { status: "A" }},   //update actio
-  { multi: true }           //update option
+db.kunder.update(             //collection
+  { rabattKod: { $gt: 1 }},   //sökkriteria
+  { $set: { status: "A" }},   //update action
+  { multi: true }             //update option
+)
+```
+
+### Uppdatera unik Collection
+```javascript
+db.kunder.updateOne(          //collection
+  { _id: ObjectId("59f0563dfa66d3313c873736") },   //sökkriteria
+  { rabattKod: 5 }            //nytt värde
 )
 ```
 
