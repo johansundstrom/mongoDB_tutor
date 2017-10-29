@@ -79,6 +79,13 @@ show collections          //visar alla Collections
 db.kunder.find()          //Visar alla Documents i Collection
 ```
 
+### Sök och visa speciellt ID
+```javascript
+db.kunder.find( 
+   { _id: ObjectId("59f0563dfa66d3313c873736")}    //"ObjectId" behöver anges 
+)
+```
+
 ### Visa Collection
 ```javascript
 db.kunder.find().pretty()  //Visar alla Documents i Collection
