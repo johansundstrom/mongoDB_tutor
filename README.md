@@ -110,6 +110,13 @@ db.kunder.find(               //sök i Collection
 )
 ```
 
+### Visa Collection med sökkriterie inom ett spann
+```javascript
+db.kunder.find(               //sök i Collection
+  { rabattKod: { $gt: 1 }, rabattKod: { $lt: 4} }    //Sökkriteria ">1 och <4"
+)
+```
+
 ### Visa Collection med sökkriterie och returerade fält
 ```javascript
 db.kunder.find(                //sök i Collection
