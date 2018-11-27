@@ -163,7 +163,7 @@ db.kunder.remove(
 Date('Dec 12, 2014 14:12:00')
 ```
 
-### Get Last record
+### Hitta sista record
 ```javascript
 db.kunder.find().skip(db.kunder.count()-1).forEach(printjson)
 ```
