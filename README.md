@@ -2,7 +2,7 @@
 
 ## NoSQL 
 * NoSQL är "non relational"
-* NoSQL används vid mer ostrukturerat data
+* NoSQL användsför ostrukturerad data
 * Principen är Key-Value-Modell liknande JSON-modellen
 * I NoSQL kallas tabell för _Collection_
 * _Document_ motsvaras av Post (record)
