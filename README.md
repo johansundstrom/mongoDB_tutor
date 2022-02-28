@@ -177,5 +177,5 @@ mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][
 
 ### Anslut till fjärr MongoDB
 ```javascript
-mongo mongodb://be9.asuscomm.com:27017/temp
+mongo mongodb://<domain>:27017/temp
 ```
